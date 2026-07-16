@@ -47,19 +47,13 @@ export default function Contact() {
                   <ArrowRight size={14} />
                 </a>
 
-                <a
-                  href="/projects/Srija_Bhashyam.pdf"
+                <a href="/projects/Srija_Bhashyam.pdf"
                   target="_blank"
-                  rel="noopener noreferrer"
-                  className="..."
-                >
-                  <span className="flex items-center gap-3">
-                    <FileText size={18} />
-                    Resume
-                  </span>
-
+                  rel="noopener noreferrer"className="flex items-center justify-between rounded-xl border border-white/10 bg-white/5 px-4 py-3 text-sm transition hover:border-blue-400 hover:bg-white/10">
+                  <span className="flex items-center gap-3"><FileText size={18} /> Resume</span>
                   <ArrowRight size={14} />
                 </a>
+
               </div>
             </div>
           </GlassCard>
