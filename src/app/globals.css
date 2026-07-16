@@ -1,0 +1,27 @@
+@import "tailwindcss";
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  background: #02030a;
+}
+
+.ticker {
+  animation: ticker 28s linear infinite;
+}
+
+@keyframes ticker {
+  0% {
+    transform: translateX(0%);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+::selection {
+  background: rgba(147, 197, 253, 0.35);
+}
