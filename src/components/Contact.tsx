@@ -37,18 +37,27 @@ export default function Contact() {
                   <ArrowRight size={14} />
                 </a>
 
-                <a href="#" className="flex items-center justify-between rounded-xl border border-white/10 bg-white/5 px-4 py-3 text-sm transition hover:border-blue-400 hover:bg-white/10">
+                <a href="https://www.linkedin.com/in/srija-bhashyam/" className="flex items-center justify-between rounded-xl border border-white/10 bg-white/5 px-4 py-3 text-sm transition hover:border-blue-400 hover:bg-white/10">
                   <span className="flex items-center gap-3"><Link size={18} /> LinkedIn</span>
                   <ArrowRight size={14} />
                 </a>
 
-                <a href="#" className="flex items-center justify-between rounded-xl border border-white/10 bg-white/5 px-4 py-3 text-sm transition hover:border-blue-400 hover:bg-white/10">
+                <a href="https://github.com/BhashyamS" className="flex items-center justify-between rounded-xl border border-white/10 bg-white/5 px-4 py-3 text-sm transition hover:border-blue-400 hover:bg-white/10">
                   <span className="flex items-center gap-3"><Link size={18} /> GitHub</span>
                   <ArrowRight size={14} />
                 </a>
 
-                <a href="#" className="flex items-center justify-between rounded-xl border border-white/10 bg-white/5 px-4 py-3 text-sm transition hover:border-blue-400 hover:bg-white/10">
-                  <span className="flex items-center gap-3"><FileText size={18} /> Resume</span>
+                <a
+                  href="/projects/Srija_Bhashyam.pdf"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="..."
+                >
+                  <span className="flex items-center gap-3">
+                    <FileText size={18} />
+                    Resume
+                  </span>
+
                   <ArrowRight size={14} />
                 </a>
               </div>
