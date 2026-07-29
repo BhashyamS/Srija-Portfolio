@@ -30,7 +30,7 @@ export default function FeaturedWork() {
     >
       <div className="mx-auto max-w-[1200px]">
         <p className="mb-2 text-[10px] font-black uppercase tracking-[0.22em] text-blue-300">
-          Featured Project
+          Featured Work
         </p>
 
         <h2 className="max-w-3xl text-[clamp(1.8rem,3vw,3rem)] font-black leading-[0.95] tracking-[-0.06em]">
@@ -101,6 +101,7 @@ export default function FeaturedWork() {
                       <p className="text-[9px] font-black uppercase tracking-[0.18em] text-blue-300">
                         Problem
                       </p>
+
                       <p className="mt-2 line-clamp-3 text-xs leading-5 text-white/65">
                         {activeProject.problem}
                       </p>
@@ -110,6 +111,7 @@ export default function FeaturedWork() {
                       <p className="text-[9px] font-black uppercase tracking-[0.18em] text-purple-300">
                         Impact
                       </p>
+
                       <p className="mt-2 line-clamp-3 text-xs leading-5 text-white/65">
                         {activeProject.impact}
                       </p>
@@ -128,9 +130,21 @@ export default function FeaturedWork() {
                   </div>
 
                   <div className="mt-5 flex flex-wrap gap-3">
-                    {activeProject.caseStudyUrl ? (
+                    {activeProject.behanceUrl ? (
+                      <a
+                        href={activeProject.behanceUrl}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="inline-flex items-center gap-2 rounded-full bg-white px-4 py-2 text-sm font-black text-black transition hover:scale-105"
+                      >
+                        View on Behance
+                        <ArrowRight size={15} />
+                      </a>
+                    ) : activeProject.caseStudyUrl ? (
                       <a
                         href={activeProject.caseStudyUrl}
+                        target="_blank"
+                        rel="noopener noreferrer"
                         className="inline-flex items-center gap-2 rounded-full bg-white px-4 py-2 text-sm font-black text-black transition hover:scale-105"
                       >
                         View Case Study
@@ -158,7 +172,6 @@ export default function FeaturedWork() {
                         Live Demo
                       </a>
                     )}
-
                   </div>
                 </div>
               </div>
@@ -172,14 +185,18 @@ export default function FeaturedWork() {
 
             <div className="flex gap-2">
               <button
+                type="button"
                 onClick={previousProject}
+                aria-label="View previous project"
                 className="rounded-full border border-white/10 bg-white/5 p-2 transition hover:bg-white/10"
               >
                 <ChevronLeft size={15} />
               </button>
 
               <button
+                type="button"
                 onClick={nextProject}
+                aria-label="View next project"
                 className="rounded-full border border-white/10 bg-white/5 p-2 transition hover:bg-white/10"
               >
                 <ChevronRight size={15} />
