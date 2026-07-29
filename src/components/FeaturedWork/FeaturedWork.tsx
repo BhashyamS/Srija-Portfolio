@@ -10,30 +10,41 @@ import ProjectCard from "@/components/FeaturedWork/ProjectCard";
 export default function FeaturedWork() {
   const [activeIndex, setActiveIndex] = useState(0);
   const carouselRef = useRef<HTMLDivElement>(null);
+
   const activeProject = featuredProjects[activeIndex];
 
+  const scrollToProject = (index: number) => {
+    const targetCard = carouselRef.current?.children[index] as
+      | HTMLElement
+      | undefined;
+
+    targetCard?.scrollIntoView({
+      behavior: "smooth",
+      block: "nearest",
+      inline: "center",
+    });
+  };
+
+  const selectProject = (index: number) => {
+    setActiveIndex(index);
+
+    window.requestAnimationFrame(() => {
+      scrollToProject(index);
+    });
+  };
+
   const previousProject = () => {
-    setActiveIndex((current) =>
-      current === 0 ? featuredProjects.length - 1 : current - 1;
+    const newIndex =
+      activeIndex === 0 ? featuredProjects.length - 1 : activeIndex - 1;
 
-      setActiveIndex(newIndex);
-
-  carouselRef.current?.scrollBy({
-    left: -245,
-    behavior: "smooth",
-   });
+    selectProject(newIndex);
   };
 
   const nextProject = () => {
-    setActiveIndex((current) =>
-      current === featuredProjects.length - 1 ? 0 : current + 1;
+    const newIndex =
+      activeIndex === featuredProjects.length - 1 ? 0 : activeIndex + 1;
 
-      setActiveIndex(newIndex);
-
-  carouselRef.current?.scrollBy({
-    left: 245,
-    behavior: "smooth",
-   });
+    selectProject(newIndex);
   };
 
   return (
@@ -70,9 +81,9 @@ export default function FeaturedWork() {
                   </div>
 
                   <div className="rounded-2xl border border-blue-400/20 bg-gradient-to-br from-blue-500/20 to-purple-500/20 p-4 shadow-[0_0_28px_rgba(124,58,237,0.2)]">
-                  <p className="text-[9px] font-black uppercase tracking-[0.2em] text-blue-200">
-                    {activeProject.status}
-                  </p>
+                    <p className="text-[9px] font-black uppercase tracking-[0.2em] text-blue-200">
+                      {activeProject.status}
+                    </p>
 
                     <h3 className="mt-2 line-clamp-2 text-[clamp(1.35rem,2.2vw,2.2rem)] font-black leading-[0.92] tracking-[-0.06em]">
                       {activeProject.title}
@@ -217,13 +228,16 @@ export default function FeaturedWork() {
             </div>
           </div>
 
-          <div   ref={carouselRef}   className="flex snap-x snap-mandatory gap-3 overflow-x-auto scroll-smooth pb-2 scrollbar-hide" >
+          <div
+            ref={carouselRef}
+            className="flex w-full snap-x snap-mandatory gap-3 overflow-x-auto scroll-smooth pb-2 scrollbar-hide"
+          >
             {featuredProjects.map((project, index) => (
               <ProjectCard
                 key={project.id}
                 project={project}
                 active={activeIndex === index}
-                onClick={() => setActiveIndex(index)}
+                onClick={() => selectProject(index)}
               />
             ))}
           </div>
