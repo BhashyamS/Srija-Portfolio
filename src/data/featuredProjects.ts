@@ -85,7 +85,8 @@ export const featuredProjects = [
     "XR Design",
     "Interaction Design",
   ],
-  previewImage: "/projects/xhale-xr-focus-room.png",
+  heroImage: "/projects/xhale-small.png",
+  cardImage: "/projects/xhale-big.png",
   behanceUrl:
     "https://www.behance.net/gallery/201214211/XHALE-in-your-space-XR-Focus-Room-(-Concept-)",
 },
@@ -103,7 +104,8 @@ export const featuredProjects = [
     "Prototyping",
     "AI Experience",
   ],
-  previewImage: "/projects/aether-ai-gallery.png",
+  heroImage: "/projects/aether-small.png",
+  cardImage: "/projects/aether-big.png",
   behanceUrl:
     "https://www.behance.net/gallery/199706867/Aether-The-Ethereal-AI-Gallery",
 },
