@@ -204,7 +204,7 @@ export default function FeaturedWork() {
             </div>
           </div>
 
-          <div className="flex snap-x snap-mandatory gap-3 overflow-x-auto pb-2">
+          <div className="flex snap-x snap-mandatory gap-3 overflow-x-auto pb-2 scrollbar-hide">
             {featuredProjects.map((project, index) => (
               <ProjectCard
                 key={project.id}
