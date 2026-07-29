@@ -9,18 +9,31 @@ import ProjectCard from "@/components/FeaturedWork/ProjectCard";
 
 export default function FeaturedWork() {
   const [activeIndex, setActiveIndex] = useState(0);
+  const carouselRef = useRef<HTMLDivElement>(null);
   const activeProject = featuredProjects[activeIndex];
 
   const previousProject = () => {
     setActiveIndex((current) =>
-      current === 0 ? featuredProjects.length - 1 : current - 1
-    );
+      current === 0 ? featuredProjects.length - 1 : current - 1;
+
+      setActiveIndex(newIndex);
+
+  carouselRef.current?.scrollBy({
+    left: -245,
+    behavior: "smooth",
+   });
   };
 
   const nextProject = () => {
     setActiveIndex((current) =>
-      current === featuredProjects.length - 1 ? 0 : current + 1
-    );
+      current === featuredProjects.length - 1 ? 0 : current + 1;
+
+      setActiveIndex(newIndex);
+
+  carouselRef.current?.scrollBy({
+    left: 245,
+    behavior: "smooth",
+   });
   };
 
   return (
@@ -204,7 +217,7 @@ export default function FeaturedWork() {
             </div>
           </div>
 
-          <div className="flex snap-x snap-mandatory gap-3 overflow-x-auto pb-2 scrollbar-hide">
+          <div   ref={carouselRef}   className="flex snap-x snap-mandatory gap-3 overflow-x-auto scroll-smooth pb-2 scrollbar-hide" >
             {featuredProjects.map((project, index) => (
               <ProjectCard
                 key={project.id}
