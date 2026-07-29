@@ -71,4 +71,40 @@ export const featuredProjects = [
     tech: ["Python", "Streamlit", "Pandas", "NumPy", "Matplotlib"],
     status: "Data App",
   },
+  {
+  id: "xhale-xr-focus-room",
+  status: "DESIGN",
+  title: "XHALE XR Focus Room",
+  subtitle: "Spatial Computing • XR Experience Design",
+  description:
+    "Designed an immersive XR focus-room concept that combines spatial computing, productivity tools, and calming environmental interactions to create a distraction-free workspace.",
+  tech: [
+    "Figma",
+    "Adobe XD",
+    "Spatial UX",
+    "XR Design",
+    "Interaction Design",
+  ],
+  previewImage: "/projects/xhale-xr-focus-room.png",
+  behanceUrl:
+    "https://www.behance.net/gallery/201214211/XHALE-in-your-space-XR-Focus-Room-(-Concept-)",
+},
+{
+  id: "aether-ai-gallery",
+  status: "DESIGN",
+  title: "Aether AI Gallery",
+  subtitle: "AI Experience • Digital Gallery Design",
+  description:
+    "Designed an AI-powered digital gallery experience centered on immersive storytelling, intuitive navigation, and thoughtful human-AI interaction.",
+  tech: [
+    "Figma",
+    "UI Design",
+    "UX Research",
+    "Prototyping",
+    "AI Experience",
+  ],
+  previewImage: "/projects/aether-ai-gallery.png",
+  behanceUrl:
+    "https://www.behance.net/gallery/199706867/Aether-The-Ethereal-AI-Gallery",
+},
 ];
