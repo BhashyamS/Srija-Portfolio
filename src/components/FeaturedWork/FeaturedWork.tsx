@@ -57,9 +57,9 @@ export default function FeaturedWork() {
                   </div>
 
                   <div className="rounded-2xl border border-blue-400/20 bg-gradient-to-br from-blue-500/20 to-purple-500/20 p-4 shadow-[0_0_28px_rgba(124,58,237,0.2)]">
-                    <p className="text-[9px] font-black uppercase tracking-[0.2em] text-blue-200">
-                      Preview
-                    </p>
+                  <p className="text-[9px] font-black uppercase tracking-[0.2em] text-blue-200">
+                    {activeProject.status}
+                  </p>
 
                     <h3 className="mt-2 line-clamp-2 text-[clamp(1.35rem,2.2vw,2.2rem)] font-black leading-[0.92] tracking-[-0.06em]">
                       {activeProject.title}
