@@ -229,18 +229,22 @@ export default function FeaturedWork() {
           </div>
 
           <div
-            ref={carouselRef}
-            className="flex w-full snap-x snap-mandatory gap-3 overflow-x-auto scroll-smooth pb-2 scrollbar-hide"
-          >
-            {featuredProjects.map((project, index) => (
-              <ProjectCard
-                key={project.id}
-                project={project}
-                active={activeIndex === index}
-                onClick={() => selectProject(index)}
-              />
-            ))}
-          </div>
+  ref={carouselRef}
+  className="flex w-full gap-4 overflow-x-auto scroll-smooth pb-3 scrollbar-hide"
+>
+  {featuredProjects.map((project, index) => (
+    <div
+      key={project.id}
+      className="w-[240px] min-w-[240px] shrink-0 snap-start"
+    >
+      <ProjectCard
+        project={project}
+        active={activeIndex === index}
+        onClick={() => selectProject(index)}
+      />
+    </div>
+  ))}
+</div>
         </div>
       </div>
     </section>
