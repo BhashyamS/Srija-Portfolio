@@ -71,13 +71,23 @@ export const featuredProjects = [
     tech: ["Python", "Streamlit", "Pandas", "NumPy", "Matplotlib"],
     status: "Data App",
   },
-  {
+{
   id: "xhale-xr-focus-room",
-  status: "DESIGN",
   title: "XHALE XR Focus Room",
-  subtitle: "Spatial Computing • XR Experience Design",
+  subtitle: "XR Workspace Experience",
+  heroImage: "/projects/xhale-big.png",
+  cardImage: "/projects/xhale-small.png",
+  demoUrl: "",
+  githubUrl: "",
+  caseStudyUrl: "",
+  behanceUrl:
+    "https://www.behance.net/gallery/201214211/XHALE-in-your-space-XR-Focus-Room-(-Concept-)",
   description:
-    "Designed an immersive XR focus-room concept that combines spatial computing, productivity tools, and calming environmental interactions to create a distraction-free workspace.",
+    "Designed an immersive extended reality workspace that reimagines how users focus, collaborate, and interact with digital environments through intuitive spatial interfaces.",
+  problem:
+    "Traditional digital workspaces often create distractions and fail to take advantage of immersive technologies for productivity.",
+  impact:
+    "Created a concept demonstrating how XR environments can improve focus, user engagement, and spatial interaction through thoughtful experience design.",
   tech: [
     "Figma",
     "Adobe XD",
@@ -85,18 +95,25 @@ export const featuredProjects = [
     "XR Design",
     "Interaction Design",
   ],
-  heroImage: "/projects/xhale-small.png",
-  cardImage: "/projects/xhale-big.png",
-  behanceUrl:
-    "https://www.behance.net/gallery/201214211/XHALE-in-your-space-XR-Focus-Room-(-Concept-)",
+  status: "UI / UX",
 },
 {
   id: "aether-ai-gallery",
-  status: "DESIGN",
   title: "Aether AI Gallery",
-  subtitle: "AI Experience • Digital Gallery Design",
+  subtitle: "AI-Powered Digital Gallery",
+  heroImage: "/projects/aether-big.png",
+  cardImage: "/projects/aether-small.png",
+  demoUrl: "",
+  githubUrl: "",
+  caseStudyUrl: "",
+  behanceUrl:
+    "https://www.behance.net/gallery/199706867/Aether-The-Ethereal-AI-Gallery",
   description:
-    "Designed an AI-powered digital gallery experience centered on immersive storytelling, intuitive navigation, and thoughtful human-AI interaction.",
+    "Designed a concept for an AI-powered digital gallery that combines immersive storytelling, elegant navigation, and human-centered interaction to create engaging art experiences.",
+  problem:
+    "Digital galleries often lack personalization and intuitive interactions that keep users engaged.",
+  impact:
+    "Explored how AI and thoughtful interface design can enhance content discovery and create more immersive visitor experiences.",
   tech: [
     "Figma",
     "UI Design",
@@ -104,9 +121,6 @@ export const featuredProjects = [
     "Prototyping",
     "AI Experience",
   ],
-  heroImage: "/projects/aether-small.png",
-  cardImage: "/projects/aether-big.png",
-  behanceUrl:
-    "https://www.behance.net/gallery/199706867/Aether-The-Ethereal-AI-Gallery",
+  status: "UI / UX",
 },
 ];
