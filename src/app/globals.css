@@ -25,3 +25,13 @@ body {
 ::selection {
   background: rgba(147, 197, 253, 0.35);
 }
+
+/* Hide horizontal scrollbar */
+.scrollbar-hide::-webkit-scrollbar {
+  display: none;
+}
+
+.scrollbar-hide {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
