@@ -16,17 +16,34 @@ export default function Navbar() {
       </a>
 
       <div className="hidden gap-8 text-sm font-semibold text-white/85 md:flex">
-        {["About", "Experience", "Projects", "Blog", "Resume", "Contact"].map(
-          (item) => (
-            <a
-              key={item}
-              href={`#${item.toLowerCase()}`}
-              className="transition hover:text-blue-200"
-            >
-              {item}
-            </a>
-          )
-        )}
+        <a href="#about" className="transition hover:text-blue-200">
+          About
+        </a>
+      
+        <a href="#experience" className="transition hover:text-blue-200">
+          Experience
+        </a>
+      
+        <a href="#projects" className="transition hover:text-blue-200">
+          Projects
+        </a>
+      
+        <a href="#blog" className="transition hover:text-blue-200">
+          Blog
+        </a>
+      
+        <a
+          href="/projects/Srija_Bhashyam.pdf"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="transition hover:text-blue-200"
+        >
+          Resume
+        </a>
+      
+        <a href="#contact" className="transition hover:text-blue-200">
+          Contact
+        </a>
       </div>
 
       <div className="flex items-center gap-2.5">
